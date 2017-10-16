@@ -1,0 +1,9 @@
+# GET
+
+GET http://localhost:8888/sample
+
+# POST
+
+POST http://localhost:8888/sample
+
+restclient
