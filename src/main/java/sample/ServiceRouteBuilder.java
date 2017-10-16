@@ -5,10 +5,10 @@ import org.apache.camel.builder.RouteBuilder;
 public class ServiceRouteBuilder extends RouteBuilder {
     private static final String PACKAGE_NAME = ServiceRouteBuilder.class.getPackage().getName();
     private static final String INTERNAL_ENDPOINT_URI = String.format("direct:%s.foo", PACKAGE_NAME);
-    public static final String ENDPOINT_URI = String.format("direct:%s", PACKAGE_NAME);
-
+    public static final String ENDPOINT_URI = String.format("restlet:http://localhost:8888/%s", PACKAGE_NAME);
+    
     public void configure() {
-        from(ENDPOINT_URI)
+        from(ENDPOINT_URI + "?restletMethods=POST")
 //                .transform(simple("Hello ${body}"))
                 .bean(Translator.class)
             .to(INTERNAL_ENDPOINT_URI);

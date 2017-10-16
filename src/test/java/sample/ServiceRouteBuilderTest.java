@@ -16,8 +16,8 @@ public class ServiceRouteBuilderTest extends CamelTestSupport {
     public void test() {
         String requestBody = this.getClass().getSimpleName();
         Exchange requestExchange = createExchangeWithBody(requestBody);
-        
-        Exchange responseExchange = template.send(ServiceRouteBuilder.ENDPOINT_URI, requestExchange);
+
+        Exchange responseExchange = template.send(ServiceRouteBuilder.ENDPOINT_URI + "?restletMethod=POST", requestExchange);
         String responseBody = responseExchange.getOut().getBody(String.class);
 
         assertEquals("Hello " + requestBody + " says ServiceRouteBuilder", responseBody);
