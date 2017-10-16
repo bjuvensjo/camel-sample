@@ -20,6 +20,6 @@ public class ServiceRouteBuilderTest extends CamelTestSupport {
         Exchange responseExchange = template.send(ServiceRouteBuilder.ENDPOINT_URI, requestExchange);
         String responseBody = responseExchange.getOut().getBody(String.class);
 
-        assertEquals("Hello " + requestBody, responseBody);
+        assertEquals("Hello " + requestBody + " says ServiceRouteBuilder", responseBody);
     }
 }
