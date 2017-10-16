@@ -1,0 +1,62 @@
+<p><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<title></title>
+<xmp theme="cerulean" style="display:none;"></p>
+
+<h2>Setup</h2>
+
+<ol>
+<li>Clone <a href="https://github.com/bjuvensjo/camel-sample/tree/master">camel-sample</a></li>
+<li>Import camel-sample in Intellij</li>
+</ol>
+
+<h2>Analyze</h2>
+
+<ol>
+<li>Run the test <a href="./src/test/java/sample/ServiceRouteBuilderTest.java">ServiceRouteBuilderTest</a>
+<ol>
+<li>What happens?</li>
+</ol></li>
+<li>Analyze <a href="./src/main/java/sample/ServiceRouteBuilder.java">ServiceRouteBuilder</a>
+<ol>
+<li>Why "extends RouteBuilder"?</li>
+<li>Why is the constant PACKAGE<em>NAME declared private, and why is ENDPOINT</em>URI public?</li>
+<li>What is "direct"? Where can you find its documentation? What options does it have? Is it synchronous or asynchronous and what difference does that make? </li>
+<li>Pros and cons with "direct"?</li>
+<li>Why is the method we implement named "configure"?</li>
+<li>Is the route we configure a consumer or producer (hint: "from")?</li>
+<li>What is a consumer and what is a producer?</li>
+<li>Can we configure a route that is both a consumer and a producer?</li>
+<li>Where are "from" and "transform" defined? And what do they return?</li>
+<li>Where is "simple" defined? Where is it documented?</li>
+<li>The "transform" method accepts a parameter of type "Expression". What is an "Expression"? And how can you know that "simple" makes an "Expression"? What is transformed by "transform"? </li>
+</ol></li>
+<li>Analyze <a href="./src/test/java/sample/ServiceRouteBuilderTest.java">ServiceRouteBuilderTest</a>
+<ol>
+<li>Write down some findings and/or questions</li>
+</ol></li>
+<li>Analyze <a href="./pom.xml">pom</a>
+<ol>
+<li>What is it?</li>
+<li>Why "dependencies"?</li>
+</ol></li>
+</ol>
+
+<h2>Develop</h2>
+
+<ol>
+<li>Configure a second route in the configure method that does some transformation</li>
+<li>Invoke the second route from the first</li>
+<li>Run the test and confirm that it gives you an error message</li>
+<li>Update the test and confirm that you can run it with success</li>
+<li>Refactor the first route so that is does not use the "transform" method, but does the same transformation in a "bean"</li>
+</ol>
+
+<p></xmp></p>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>
