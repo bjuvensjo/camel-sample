@@ -9,7 +9,8 @@
 ## Setup ##
 
 1. Clone [camel-sample](https://github.com/bjuvensjo/camel-sample/tree/master)
-2. Import camel-sample in Intellij
+2. Checkout the "Exercise-1" branch
+3. Import camel-sample in Intellij
 
 ## Analyze ##
 
