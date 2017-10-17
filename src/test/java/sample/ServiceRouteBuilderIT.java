@@ -3,11 +3,13 @@ package sample;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.test.junit4.CamelTestSupport;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class ServiceRouteBuilderIT extends CamelTestSupport {
 
     @Test
+    @Ignore
     public void testSuccess() {
         String requestBody = this.getClass().getSimpleName();
         Exchange requestExchange = createExchangeWithBody(requestBody);
@@ -19,6 +21,7 @@ public class ServiceRouteBuilderIT extends CamelTestSupport {
     }
 
     @Test
+    @Ignore
     public void testFailure() {
         String requestBody = null;
         Exchange requestExchange = createExchangeWithBody(requestBody);
