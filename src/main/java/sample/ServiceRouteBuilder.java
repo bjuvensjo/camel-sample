@@ -10,10 +10,10 @@ public class ServiceRouteBuilder extends RouteBuilder {
     public void configure() {
         from(ENDPOINT_URI + "?restletMethods=POST")
                 .choice()
-                .when(body().isNull()).throwException(new RuntimeException("Body must not be null!"))
+                    .when(body().isNull()).throwException(new RuntimeException("Body must not be null!"))
                 .otherwise()
-                .bean(Translator.class)
-                .to(INTERNAL_ENDPOINT_URI)
+                    .bean(Translator.class)
+                    .to(INTERNAL_ENDPOINT_URI)
                 .end();
 
         from(INTERNAL_ENDPOINT_URI)
