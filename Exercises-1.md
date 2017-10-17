@@ -41,6 +41,9 @@
 3. Run the test and confirm that it gives you an error message
 4. Update the test and confirm that you can run it with success
 5. Refactor the first route so that is does not use the "transform" method, but does the same transformation in a "bean"
+6. Commit your code
+7. Create a personal repository named "camel.sample" and add it as a remote
+8. Push your changes to your personal "camel.sample"
 
 </xmp>
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
