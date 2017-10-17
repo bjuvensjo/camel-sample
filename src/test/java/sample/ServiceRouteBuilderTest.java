@@ -13,7 +13,7 @@ public class ServiceRouteBuilderTest extends CamelTestSupport {
     }
 
     @Test
-    public void test() {
+    public void testSuccess() {
         String requestBody = this.getClass().getSimpleName();
         Exchange requestExchange = createExchangeWithBody(requestBody);
 
@@ -21,5 +21,15 @@ public class ServiceRouteBuilderTest extends CamelTestSupport {
         String responseBody = responseExchange.getOut().getBody(String.class);
 
         assertEquals("Hello " + requestBody + " says ServiceRouteBuilder", responseBody);
+    }
+
+    @Test
+    public void testFailure() {
+        String requestBody = null;
+        Exchange requestExchange = createExchangeWithBody(requestBody);
+
+        Exchange responseExchange = template.send(ServiceRouteBuilder.ENDPOINT_URI + "?restletMethod=POST", requestExchange);
+        
+        assertTrue(responseExchange.isFailed());
     }
 }

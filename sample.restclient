@@ -2,8 +2,12 @@
 
 GET http://localhost:8888/sample
 
-# POST
+# POST success
 
 POST http://localhost:8888/sample
 
 restclient
+
+# POST failure
+
+POST http://localhost:8888/sample
