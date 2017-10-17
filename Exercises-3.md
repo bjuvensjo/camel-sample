@@ -22,6 +22,8 @@
 2. Create an integration test that tests the route that is deployed through Main (hint: It is very similar to and less code than [ServiceRouteBuilderTest](./src/main/java/sample/ServiceRouteBuilderTest.java)
 3. Confirm that you can run your test with success
 4. Make a call to your deployed route from SoapUI or Postman
+5. Commit your code
+6. Push your changes to your personal "camel.sample"
 
 </xmp>
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
